@@ -1,0 +1,9 @@
+dev:
+ dockerfile: Dockerfile
+ ports:
+ - "80:80"
+ volumes:
+ - ./:/var/www/html
+ build: .
+ expose:
+ - "80"

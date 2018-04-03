@@ -1,0 +1,40 @@
+          <div>
+          <div class="col-md-4 input-group mb-3">
+            <input type="text" class="form-control" placeholder="CPF" aria-label="CPF" 
+            aria-describedby="basic-addon2" cpf maxlength="14" ng-model="cpf">
+            <div class="input-group-append">
+              <button type="button" class="input-group-text" id="basic-addon2" 
+              style="cursor: pointer;" ng-click="consultar()">
+                Pesquisar
+              </button>
+            </div>
+
+            <div class="col-md-2">
+              <button type="button" class="btn btn-outline-primary" ng-click="novo()">Novo</button>
+            </div>
+          </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">CPF</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">#</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="item in items">
+                  <td>{{item.numero}}</td>
+                  <td>{{item.statusDescricao}}</td>
+                  <td>
+                    <button type="button" class="btn btn-outline-primary" 
+                    ng-click="alterar(item.numero, item.statusDescricao)">
+                      Alterar
+                    </button>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <main>
+          </main>

@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^api/cpf/?$ routes/cpf.php [QSA,L,NC]
+RewriteRule ^api/cpf/(.*)/?$ routes/cpf.php?q=$1 [QSA,L,NC]
+RewriteRule ^api/?$ routes/index.php [QSA,L,NC]
+
+</IfModule>
